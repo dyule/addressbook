@@ -1,7 +1,13 @@
 language: java
-
-install: 
-  - mvn install
-
-jdk: 
-  - oraclejdk8
+install:
+- mvn install
+jdk:
+- oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: fIQgCuw5041dk/4ereP7ydteWcN6sfODgJh9p4ag9MD2odsf3oM/cTPiPlYvjMmf8EzZQpOp/2q0ycJxfla3a9wHV5pKyTpJ/aB9ra14sVL4GpZuOv38+AH2CU4xkERa8iA2jPo8yILiCAvZffwf6OHywhC43WbxXFGJFM5lVO/D77+DmkDYx+zCLCSAAkI4zfOW2xedzNwjBXWTgS1afFq4yYCh8+f/nbFrHKMDviO07s2Kui+G49WfVyse1tXyboQLBp5tto4bZwIB7O8BViOi2hPbzEbZHj0SkcGbryldywa2J2Fvu+PI2vPJBat8eX6qjhkrhX8VhWztQuOn2SHO4ChgzH4i5lfnep0C8qLdTmZXb1+0Vg/o+oopVB3O3SSldu/BGMSc6tYp74y7xCcsebwwhSx/ZfxVx5fdNEdu0wBkViZcvtOe8WxFpNukWWvOTW6zO5Qyid2mFMI+SPflhc371naM75UT99SMyq4PVbGThUs/NF+pkHsPQz/xUxVik0OFqWpUfVp7S5hH3WjQGbUBi3e5OOzqoJSCbIhuW/fyNpnqPU9vztqnrp8YKnwURq8jwg6ImWtbT2Zjm0JbTNnhJ1XgoyzRpq38tHebcc9P6ukrsHtkL1ZkgQX5M411TVFKX+uf53EACXTVE3+mgdTSIeQdhMu7Qt8D46M=
+  app: dyule-addressbook
+  on:
+    repo: dyule/addressbook
+    branch: todo_tasks
