@@ -76,10 +76,8 @@ public class AddressbookUI extends UI {
 
         contactList
                 .setContainerDataSource(new BeanItemContainer<>(Contact.class));
-        contactList.setColumnOrder("firstName", "lastName", "email");
+        contactList.setColumnOrder("firstName", "lastName", "startDate", "endDate");
         contactList.removeColumn("id");
-        contactList.removeColumn("birthDate");
-        contactList.removeColumn("phone");
         contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
         contactList.addSelectionListener(
                 e -> contactForm.edit((Contact) contactList.getSelectedRow()));
@@ -119,10 +117,10 @@ public class AddressbookUI extends UI {
     /*
      * Choose the design patterns you like.
      *
-     * It is good practice to have separate data access methods that handle the
-     * back-end access and/or the user interface updates. You can further split
-     * your code into classes to easier maintenance. With Vaadin you can follow
-     * MVC, MVP or any other design pattern you choose.
+     * It is good practice to not copy code and have separate data access methods 
+     * that handle the back-end access and/or the user interface updates. You can
+     * further split your code into classes to easier maintenance. With Vaadin 
+     * you can follow MVC, MVP or any other design pattern you choose.
      */
     void refreshContacts() {
         refreshContacts(filter.getValue());
