@@ -1,3 +1,4 @@
+sudo: false
 lauguage: java
 install:
 - mvn install
