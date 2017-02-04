@@ -1,6 +1,6 @@
-sudo: required
 lauguage: java
 install:
+- ruby
 - mvn install
 jdk:
 - oraclejdk8
