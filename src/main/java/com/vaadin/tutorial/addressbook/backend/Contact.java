@@ -23,6 +23,11 @@ public class Contact implements Serializable, Cloneable {
     private String email = "";
     private Date birthDate;
 
+    // new properties
+    private String task = "";
+    private Date startDate;
+    private Date endDate;
+    
     public Long getId() {
         return id;
     }
@@ -70,7 +75,34 @@ public class Contact implements Serializable, Cloneable {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+    
+    // new properties' setter and getter
+    
+    public String getTask() {
+		return task;
+	}
 
+	public void setTask(String task) {
+		this.task = task;
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+    
+    
     @Override
     public Contact clone() throws CloneNotSupportedException {
         try {
@@ -80,11 +112,14 @@ public class Contact implements Serializable, Cloneable {
         }
     }
 
-    @Override
+
+	@Override
     public String toString() {
-        return "Contact{" + "id=" + id + ", firstName=" + firstName
-                + ", lastName=" + lastName + ", phone=" + phone + ", email="
-                + email + ", birthDate=" + birthDate + '}';
+//        return "Contact{" + "id=" + id + ", firstName=" + firstName
+//                + ", lastName=" + lastName + ", phone=" + phone + ", email="
+//                + email + ", birthDate=" + birthDate + '}';
+		return firstName + ',' + lastName + ',' + task;
+		
     }
 
 }

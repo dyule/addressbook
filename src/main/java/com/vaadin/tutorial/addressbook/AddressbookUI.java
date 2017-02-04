@@ -71,12 +71,13 @@ public class AddressbookUI extends UI {
          */
         newContact.addClickListener(e -> contactForm.edit(new Contact()));
 
-        filter.setInputPrompt("Filter contacts...");
+        filter.setInputPrompt("Filter contacts or tasks...");
         filter.addTextChangeListener(e -> refreshContacts(e.getText()));
 
         contactList
                 .setContainerDataSource(new BeanItemContainer<>(Contact.class));
-        contactList.setColumnOrder("firstName", "lastName", "email");
+        contactList.setColumnOrder("firstName", "lastName", "task", "startDate", "endDate");
+        contactList.removeColumn("email");
         contactList.removeColumn("id");
         contactList.removeColumn("birthDate");
         contactList.removeColumn("phone");
