@@ -1,4 +1,4 @@
-lauguage: java
+language: java
 install:
 - mvn install
 jdk:
